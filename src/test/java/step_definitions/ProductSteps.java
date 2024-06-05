@@ -27,6 +27,8 @@ public class ProductSteps {
 
     @And("Remove button on the saucelabs backpack is displayed")
     public void removeButtonOnTheSaucelabsBackpackIsDisplayed() {
+        Thread.sleep(1000);
         Assert.assertTrue(productPage.verifyRemoveButtonDisplayedOnTheProductSauceLabsBackpack());
+
     }
 }
