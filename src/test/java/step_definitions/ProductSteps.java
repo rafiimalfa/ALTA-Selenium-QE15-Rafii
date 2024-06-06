@@ -23,11 +23,13 @@ public class ProductSteps {
 
     @And("Add to cart saucelabs backpack")
     public void addToCartSaucelabsBackpack() {
+        productPage.clickAddToCartSauceLabsBackpack();
+
     }
 
     @And("Remove button on the saucelabs backpack is displayed")
     public void removeButtonOnTheSaucelabsBackpackIsDisplayed() {
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         Assert.assertTrue(productPage.verifyRemoveButtonDisplayedOnTheProductSauceLabsBackpack());
 
     }
