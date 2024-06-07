@@ -1,5 +1,5 @@
-Feature: Verify user can add to cart and remove
-  Scenario: Add to cart Red T-Shirt and Sauce Labs Onesie
+Feature: End To End
+  Scenario: Add to cart Red T-Shirt and Sauce Labs Onesie and checkout Sauce Labs Onesie
     Given User login with valid username "standard_user" and password "secret_sauce"
     And Verify set filter button displayed
     And Click set filter button "Name (Z to A)"
