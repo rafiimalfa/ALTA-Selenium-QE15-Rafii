@@ -1,5 +1,6 @@
 package org.example.pageObject;
 
+//import jdk.jfr.internal.tools.PrettyWriter;
 import org.example.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -27,6 +28,10 @@ public class ProductPage extends BasePage {
     private WebElement saucelabsonesie;
     @FindBy(id = "add-to-cart-sauce-labs-onesie")
     private WebElement btnaddtocartsaucelabsonesie;
+    @FindBy(xpath = "//a[.='Sauce Labs Onesie']" )
+    private WebElement saucelabsonesieonlowtoprice;
+    @FindBy(xpath = "//div[.='Sauce Labs Fleece Jacket']")
+    private WebElement saucelabsfleecejacket;
 
     public boolean verifyTitleProductSauceLabsBackpack(){
         return isDisplayed(titleProductSauceLabsBackpack);
@@ -75,6 +80,11 @@ public class ProductPage extends BasePage {
         waitForElementClickable(btnaddtocartsaucelabsonesie);
         click(btnaddtocartsaucelabsonesie);
     }
-
+    public boolean verifysaucelabsonesieindisplayedonlowtoprice() {
+        return isDisplayed(saucelabsonesieonlowtoprice);
+    }
+    public boolean verifysaucelabsfleecejacketindisplayed(){
+        return isDisplayed(saucelabsfleecejacket);
+    }
 
 }

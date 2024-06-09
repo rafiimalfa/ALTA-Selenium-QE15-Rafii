@@ -42,4 +42,18 @@ public class LoginSteps {
         System.out.println(Title);
         Assert.assertEquals(title, Title);
     }
+
+    @When("User input {string} and {string} and click login")
+    public void userInputAndAndClickLogin(String username, String password) {
+        loginPage.inputFieldUserName(username);
+        loginPage.inputFieldPassword(password);
+        loginPage.clickButtonLogin();
+    }
+
+    @Then("User should see error message with title {string}")
+    public void userShouldSeeErrorMessageWithTitle(String title) {
+        String Title = loginPage.getTittleErrorMessageUsernameAndPassword();
+        System.out.println(Title);
+        Assert.assertEquals(title, Title);
+    }
 }
