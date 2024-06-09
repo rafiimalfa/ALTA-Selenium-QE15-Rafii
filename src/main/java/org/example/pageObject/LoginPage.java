@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends BasePage {
+
+
     public LoginPage(WebDriver driver) {
         super(driver);
     }
@@ -17,6 +19,8 @@ public class LoginPage extends BasePage {
     private WebElement buttonLogin;
     @FindBy(xpath = "//span[@class='title']")
     private WebElement labelProduct;
+    @FindBy(xpath = "//h3[.='Epic sadface: Sorry, this user has been locked out.']")
+    private WebElement errormessage;
 
 
     public void inputFieldUserName(String userName){
@@ -41,5 +45,8 @@ public class LoginPage extends BasePage {
         waitForElementVisible(fieldPassword);
         waitForElementVisible(buttonLogin);
         return isDisplayed(fieldUserName) && isDisplayed(fieldPassword) && isDisplayed(buttonLogin);
+    }
+    public String getTittleErrorMessage(){
+        return getText(errormessage);
     }
 }

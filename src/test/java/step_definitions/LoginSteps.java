@@ -35,4 +35,11 @@ public class LoginSteps {
         loginPage.clickButtonLogin();
 
     }
+
+    @Then("User should be see error message with title {string}")
+    public void userShouldBeSeeErrorMessageWithTitle(String title) {
+        String Title = loginPage.getTittleErrorMessage();
+        System.out.println(Title);
+        Assert.assertEquals(title, Title);
+    }
 }

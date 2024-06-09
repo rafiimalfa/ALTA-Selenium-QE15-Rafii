@@ -2,14 +2,11 @@ package step_definitions;
 
 import hooks.Hooks;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Then;
 import org.example.pageObject.CartPage;
 import org.example.pageObject.ProductPage;
 import org.openqa.selenium.WebDriver;
 
-import java.util.Calendar;
-
-public class EndtoendSteps {
+public class EtoeSteps {
     private final WebDriver driver = Hooks.driver;
     ProductPage productPage = new ProductPage(driver);
     CartPage cartPage = new CartPage(driver);
